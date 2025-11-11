@@ -1,0 +1,36 @@
+<div class="container my-4">
+  <h1 class="h4 mb-3">Lista de departamentos</h1>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>Número</th>
+          <th>Nombre</th>
+          <th>Localidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (departamento of departamentos; track $index) {
+        <tr>
+          <td>{{ departamento.numero }}</td>
+          <td>{{ departamento.nombre }}</td>
+          <td>{{ departamento.localidad }}</td>
+          <td>
+            <a
+              class="btn btn-dark"
+              [routerLink]="[
+                '/details',
+                departamento.numero,
+                departamento.nombre,
+                departamento.localidad
+              ]"
+              >Detalles</a
+            >
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

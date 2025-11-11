@@ -1,0 +1,48 @@
+<div class="container my-4">
+  <h1 class="h4 mb-3">Nuevo Departamento</h1>
+
+  <form class="row g-3 needs-validation" #createForm="ngForm">
+    <div class="col-12">
+      <label class="form-label">Número</label>
+      <input
+        type="number"
+        class="form-control"
+        name="cajaNumero"
+        #cajaNumero
+        placeholder="Ingrese número"
+        required
+      />
+      <div class="invalid-feedback">Por favor ingresa un número válido.</div>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        name="cajaNombre"
+        #cajaNombre
+        placeholder="Ingrese nombre"
+        required
+      />
+      <div class="invalid-feedback">Por favor ingresa el nombre.</div>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Localidad</label>
+      <input
+        type="text"
+        class="form-control"
+        name="cajaLocalidad"
+        #cajaLocalidad
+        placeholder="Ingrese localidad"
+        required
+      />
+      <div class="invalid-feedback">Por favor ingresa la localidad.</div>
+    </div>
+
+    <div class="col-12 d-flex gap-2">
+      <button type="submit" class="btn btn-warning" (click)="createDepartamento()">Añadir</button>
+    </div>
+  </form>
+</div>
