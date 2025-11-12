@@ -1,0 +1,47 @@
+<div class="container my-4">
+  <h1 class="h4 mb-3" style="color: blue">Editar Departamento</h1>
+
+  @if (departamento) {
+  <form class="row g-3 needs-validation" #updateForm="ngForm">
+    <div class="col-12">
+      <label class="form-label">Id</label>
+      <input
+        type="number"
+        class="form-control"
+        #cajaNumero
+        name="cajaNumero"
+        value="{{ departamento.numero }}"
+        disabled
+      />
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        #cajaNombre
+        name="cajaNombre"
+        value="{{ departamento.nombre }}"
+      />
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Localidad</label>
+      <input
+        type="text"
+        class="form-control"
+        #cajaLocalidad
+        name="cajaLocalidad"
+        value="{{ departamento.localidad }}"
+      />
+    </div>
+
+    <div class="col-12 d-flex gap-3">
+      <button type="submit" class="btn btn-primary" (click)="updateDepartamento()">
+        Actualizar
+      </button>
+    </div>
+  </form>
+  }
+</div>

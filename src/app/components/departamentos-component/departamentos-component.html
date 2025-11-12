@@ -18,7 +18,7 @@
           <td>{{ departamento.localidad }}</td>
           <td>
             <a
-              class="btn btn-dark"
+              class="btn btn-dark me-2"
               [routerLink]="[
                 '/details',
                 departamento.numero,
@@ -27,6 +27,10 @@
               ]"
               >Detalles</a
             >
+            <a class="btn btn-info me-2" [routerLink]="['/edit', departamento.numero]">Editar</a>
+            <button class="btn btn-danger" (click)="deleteDepartamento(departamento.numero)">
+              Eliminar
+            </button>
           </td>
         </tr>
         }

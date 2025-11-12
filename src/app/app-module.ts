@@ -10,9 +10,10 @@ import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepartamentos } from './services/serviceDepartamentos';
 import { CreateComponent } from './components/create-component/create-component';
 import { DetailsComponent } from './components/details-component/details-component';
+import { EditComponent } from './components/edit-component/edit-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, DepartamentosComponent, CreateComponent, DetailsComponent],
+  declarations: [App, MenuComponent, DepartamentosComponent, CreateComponent, DetailsComponent, EditComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceDepartamentos],
   bootstrap: [App],

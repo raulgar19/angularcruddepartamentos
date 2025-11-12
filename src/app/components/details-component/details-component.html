@@ -1,3 +1,12 @@
-<div>
-  <h1>Detalles</h1>
+<div class="container my-4">
+  <h4>Detalles</h4>
+  <a class="btn btn-info mb-3" [routerLink]="['/']">Back to index</a>
+
+  @if (departamento) {
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Id:</strong> {{ departamento.numero }}</li>
+    <li class="list-group-item"><strong>Nombre:</strong> {{ departamento.nombre }}</li>
+    <li class="list-group-item"><strong>Localidad:</strong> {{ departamento.localidad }}</li>
+  </ul>
+  }
 </div>
